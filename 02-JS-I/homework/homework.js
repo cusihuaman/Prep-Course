@@ -7,13 +7,13 @@ const nuevaString = 'Ayma';
 const nuevoNum = 22;
 
 // Crea una variable booleana:
-const nuevoBool = true;
+const nuevoBool = false;
 
 // Resuelve el siguiente problema matemático:
-const nuevaResta = 10 - null === 10;
+const nuevaResta = 10 - 5 === 10;
 
 // Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = 10 * null === 0 ;
+const nuevaMultiplicacion = 10 * 0 === 0 ;
 
 // Resuelve el siguiente problema matemático:
 const nuevoModulo = 21 % 5 === 1;
@@ -35,35 +35,37 @@ function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  return(x+y)
+  let total=x+y;
+  return total;
 }
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  return(x-y)
+  let total=x-y;
+  return total;
 }
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  return(x*y)
+  let total=x*y;
+  return total;
 }
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  return(x/y)
+  var total=x/y;
+  return total;
 }
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(x===y){
-    true
-  }
-  false
+  var bool=(x===y);
+  return bool;
 }
 
 function tienenMismaLongitud(str1, str2) {
@@ -77,11 +79,12 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num<90){
-    return true
+  var menor=num<90;
+  if(menor){
+    return true;
   }
   else{
-    return false
+    return false;
   }
   
 }
@@ -90,11 +93,12 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num>50){
-   return  true
+  var mayor=num>50;
+  if(mayor){
+   return  true;
   }
   else{
-    return false
+    return false;
   }
   
 }
@@ -102,7 +106,8 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-return x%y;
+  var resto= x%y;
+  return resto;
   
 }
 
@@ -110,11 +115,12 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num%2===0){
-   return true
+  var resto=num%2;
+  if(resto===0){
+   return true;
   }
   else{
-   return  false
+   return  false;
   }
   
 }
@@ -123,11 +129,12 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num%2 ===1){
-   return  true
+  var impar=num%2;
+  if(impar !==0){
+   return  true;
   }
   else{
-    return false
+    return false;
   }
 }
 
@@ -135,39 +142,45 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return Math.pow(num,2)
+  var cuadrado=num**2;
+  return cuadrado;
   
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return Math.pow(num,3)
+  var cubo=num**3;
+  return cubo;
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
- return Math.pow(num,exponent);
+ var n=num**exponent;
+ return n;
   
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  return Math.round(num)
+  var redondera=Math.round(num);
+  return redondera;
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return Math.ceil(num)
+  var respuesta= Math.ceil(num);
+  return respuesta;
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
- return Math.random(0,1)
+  var resultado=Math.random();
+ return resultado;
   
 }
 
@@ -180,10 +193,10 @@ function esPositivo(numero) {
     return  false;
   }
   else if(numero>0){
-    return 'positivo';
+    return "Es positivo";
   }
   else{
-    return 'negativo';
+    return "Es negativo";
   }
   
 }
@@ -199,7 +212,7 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
- let combinar=(nombre+''+apellido);
+ let combinar=(nombre+' '+apellido);
  return combinar;
 }
 
@@ -207,7 +220,8 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return('Hola'+nombre);
+  let frase=`Hola ${nombre}!`;
+  return frase;
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -221,7 +235,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  let perimetro=4(lado);
+  let perimetro=(lado)*4;
   return perimetro;
 }
 
@@ -249,29 +263,32 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  switch(letra){
-    case 'A':
-      console.log('Es vocal');
-      break;
-    case 'E':
-      console.log('Es vocal');
-      break ;
-    case 'I':
-      console.log('Es vocal');
-      break ;
-    case '0':
-      console.log('Es vocal');
-      break ;
-    case 'U':
-      console.log('Es vocal');
-      break;
-      default:
-        console.log('Datos incorrectos')
+  if(letra>1 ||letra===''||letra !==letra){
+    "Dato incorrecto";
   }
-  return;
+  else{
+    switch(letra){
+      case 'a':
+        'Es vocal'
+        break;
+      case 'e':
+        'Es vocal'
+        break ;
+      case 'i':
+        'Es vocal'
+        break ;
+      case 'o':
+        'Es vocal'
+        break ;
+      case 'u':
+        'Es vocal'
+        break;
+        default:
+          'Dato incorrectos';
+    }
+  }
 }
-
-
+console.log(esVocal('p'));
 
 // No modificar nada debajo de esta línea
 // --------------------------------
